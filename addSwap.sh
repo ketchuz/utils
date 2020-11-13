@@ -1,5 +1,4 @@
 #!/bin/bash
-set -eo pipefail
 
 DEFAULT_RAM=4
 DEFAULT_SWAP_NAME=swapfile
