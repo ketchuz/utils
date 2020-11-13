@@ -17,15 +17,6 @@ ensureBashUtilsAreInstalled() {
     fi
 }
 
-installZsh() {
-    logInfo "Installing Oh-my-ZSH..."
-    sudo apt-get update -y
-    sudo apt-get install zsh -y
-    sudo apt-get install git-core -y
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" >/dev/null
-    logSuccess "Oh-my-ZSH installed"
-}
-
 installGitlabRunner() {
     logInfo "Installing Gitlab Runner..."
     getent passwd gitlab-runner > /dev/null 2&>1
@@ -65,6 +56,5 @@ sourceBashUtils
 installGitlabRunner
 installDocker
 installDockerCompose
-installZsh
 
 logSuccess "Server setup done 🚀 Ready to do some deploys"

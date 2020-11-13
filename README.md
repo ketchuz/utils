@@ -13,3 +13,9 @@ sh -c "$(curl -H 'Cache-Control: no-cache' -fsSL https://raw.githubusercontent.c
 ```bash
 sh -c "$(curl -H 'Cache-Control: no-cache' -fsSL https://raw.githubusercontent.com/ketchuz/utils/main/gitlabRunnerSetup.sh)"
 ```
+
+## Install Oh-my-ZSH
+
+```bash
+sh -c "$(curl -H 'Cache-Control: no-cache' -fsSL https://raw.githubusercontent.com/ketchuz/utils/main/installZsh.sh)"
+```
