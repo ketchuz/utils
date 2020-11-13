@@ -2,6 +2,10 @@
 
 export BASH_UTILS_LOCATION="/root/bash-utils"
 
+sourceBashUtils() {
+    ensureBashUtilsAreInstalled
+    source ${BASH_UTILS_LOCATION}/bootstrap.sh
+}
 
 ensureBashUtilsAreInstalled() {
     if [ ! -d "${BASH_UTILS_LOCATION}" ]; then
@@ -55,11 +59,9 @@ installDockerCompose() {
     sudo chmod +x /usr/local/bin/docker-compose
     logSuccess "Docker Compose installed"
 }
-ensureBashUtilsAreInstalled
-
-source ${BASH_UTILS_LOCATION}/bootstrap.sh
 
 
+sourceBashUtils
 installGitlabRunner
 installDocker
 installDockerCompose
